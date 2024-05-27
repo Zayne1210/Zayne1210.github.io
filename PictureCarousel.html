@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 3px solid #333;
+    overflow: hidden;
+}
+#list {
+    position: absolute;
+    z-index: 1;
+    width: 2400px;
+    height: 400px;
+    left: 0px;
+}
+#list img {
+    float: left;
+    width: 600px;
+    height: 400px;
+}
+
+#buttons {
+    position: absolute;
+    left: 250px;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 100px;
+}
+#buttons span {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+}
+#buttons .active {
+    background: orangered;
+}
+/* 添加过渡效果 */
+/* #list {  
+    
+    transition: left 1s ease-in-out; 
+} */
+
+    </style>
+</head>
+
+
+
+<body>
+    <div id="container">
+        <div id="list">
+            <img src="picture\吉伊3.png" />
+            <img src="picture\吉伊4.png" />
+            <img src="picture\吉伊5.png" />
+            <img src="picture\吉伊6.png" />
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+        </div>
+    
+        
+    </div>
+    
+   
+</body>
+
+<script>  
+
+
+    // 获取必要的DOM元素  
+    var container = document.getElementById('container');  
+    var list = document.getElementById('list');  
+    var imgWidth = 600; // 图片宽度  
+    var images = list.getElementsByTagName('img').length; // 图片数量  
+    var currentImage = 0; // 当前显示的图片索引 
+    
+
+    // 初始化轮播  
+    function startSlideshow() {  
+        setInterval(function() {  
+            // 移动到下一张图片  
+            currentImage = (currentImage + 1) % images;  
+            list.style.left = -currentImage * imgWidth + 'px';  
+      
+            // 如果需要，更新底部按钮的选中状态（此示例中未使用按钮）  
+        }, 1000); // 每1秒切换一次图片  
+    }  
+      
+    // 调用函数开始轮播  
+    window.onload = startSlideshow; 
+
+    function startSlideshow() {  
+    setInterval(function() {  
+        // 移动到下一张图片  
+        currentImage = (currentImage + 1) % images;  
+        list.style.left = -currentImage * imgWidth + 'px';  
+  
+        // 更新底部按钮的选中状态  
+        // 先移除所有按钮上的active类  
+        var buttons = document.getElementById('buttons').getElementsByTagName('span');  
+        for (var i = 0; i < buttons.length; i++) {  
+            buttons[i].classList.remove('active');  
+        }  
+        // 然后给当前图片的按钮添加active类  
+        buttons[currentImage - 1].classList.add('active'); // 注意索引是从0开始的，但span的index是从1开始的  
+    }, 1000); // 每1秒切换一次图片  
+}  
+
+    
+
+    
+    
+
+    
+ 
+    </script>
+</html>
