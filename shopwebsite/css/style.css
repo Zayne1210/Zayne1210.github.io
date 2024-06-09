@@ -1,0 +1,176 @@
+.left_blank{
+    width: 30%;
+    height: 600px;
+    background-color: aqua;
+    float: left;
+    margin-top: 200px;
+    margin-left: 0%;
+    text-align: center;
+    clear: left;
+    /* overflow: hidden; */
+    /* 超出的部分隐藏 */
+  }
+.bt1{
+    width: 40%;
+    height: 40px;
+    background-color: rgb(228, 187, 187);
+    margin-left: 30%;
+    margin-top: 60px;
+}
+.left_blank a{
+    position: relative;
+    top: -40px;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+    text-align: center;
+    font-size: 30px;
+    
+}
+.left_blank a:hover{
+    text-decoration: underline;
+}
+.left_blank img:hover{
+    transform: scale(1.2);
+    /* 鼠标悬停，图片放大1.3倍 */
+    cursor:pointer;
+}
+  .middle_blank{
+    width:30%;
+    height:600px;
+    background-color: aquamarine;
+    float: left;
+    margin-left: 80px;
+    margin-top: 200px;
+    position: relative;
+  
+  }
+  .middle_blank a{
+    position: relative;
+    top: -40px;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+    text-align: center;
+    left: 200px;
+    font-size: 30px;
+    
+}
+.middle_blank a:hover{
+  text-decoration: underline;
+}
+  .middle_blank img:hover{
+    transform: scale(1.2);
+    /* 鼠标悬停，图片放大1.3倍 */
+    cursor:pointer;
+}
+  
+  .right_blank{
+    width:30%;
+    height:600px;
+    background-color: blueviolet;
+    float: right;
+    margin-top: 200px;
+  }
+  .right_blank a{
+    position: relative;
+    top: -40px;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+    text-align: center;
+    left: 200px;
+    font-size: 30px;
+      overflow: hidden;
+    
+}
+.right_blank a:hover{
+  text-decoration: underline;
+}
+  .right_blank img:hover{
+    transform: scale(1.2);
+    /* 鼠标悬停，图片放大1.3倍 */
+    cursor:pointer;
+    /* overflow: hidden; */
+    /* 超出的部分隐藏 */
+}
+  .full-width-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:0.5s;
+  }
+
+/* 底部 */
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container{
+  position: relative;
+  top: 50px;
+  max-width: 1300px;
+  margin:auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap-reverse;
+}
+.logo{
+  width:300px;
+}
+.social-media{
+  margin:20px 0;
+}
+.social-media a{
+  color:#001a21;
+  margin-right:25px;
+  font-size:22px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+.social-media a:hover{
+  color:#fc5c65
+}
+.right-col h1{
+  font-size: 26px;
+}
+.border{
+  width:100px;
+  height:4px;
+  background: #fc5c65;
+}
+.newsletter-form{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.txtb{
+  flex:1;
+  padding:18px 40px;
+  font-size:16px;
+  color:#293043;
+  background: #ddd;
+  border:none;
+  font-weight: 700;
+  outline:none;
+  border-radius:30px;
+  min-width:260px;
+}
+.btn{
+  padding:18px 40px;
+  font-size:16px;
+  color:#f1f1f1;
+  background:  #fc5c65;
+  border:none;
+  font-weight: 700;
+  outline:none;
+  border-radius:30px;
+  margin-left:20px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+/* 按钮变浅 */
+.btn:hover{
+  opacity:  .7;
+}

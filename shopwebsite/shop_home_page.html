@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            font-family: "Open Sans",sans-serif;
+        }
+        .header{
+          display:flex;
+          align-items: center;
+            height:60px;
+            width:100%;
+            background-color: aliceblue;
+        }
+         
+      /* 菜单 */
+        .menu{
+        float: left;
+        width:0px;
+        height: 300px;
+        background-color: rgb(221, 190, 200);
+        padding-top: 0px;
+        transition:all .3s;
+    }
+    .menu.show{
+      width:100%;
+      float: inline-start;
+      /* z-index: 2; */
+    }
+    /* .slider-container.show{
+      width: 750px;
+    } */
+    .menu a{
+        display:block;
+        color: aliceblue;
+        line-height: 80px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .menu a:hover{
+  text-decoration: underline;
+}
+        /* 菜单按钮 */
+        .menu_btn{
+          width:40px;
+          height:40px;
+          position:relative;
+          margin-left: 30px;
+        }
+        .menu_btn i{
+          width:40px;
+          height:2px;
+          background-color: black;
+          position:absolute;
+          left:0;
+          transition:all .1s;
+        }
+        .menu_btn i:nth-child(1){
+          top:0;
+        }
+        .menu_btn i:nth-child(2){
+          top:19px;
+        }
+        .menu_btn i:nth-child(3){
+          bottom: 0;
+        }
+        .menu_btn.close i:nth-child(1){
+          width:55px;
+          transform: rotate(45deg);
+          transform-origin: left top;
+        }
+        .menu_btn.close i:nth-child(2){
+          opacity:0;
+        }
+        .menu_btn.close i:nth-child(3){
+          width:55px;
+          transform: rotate(-45deg);
+          transform-origin: left bottom;
+        }
+        
+        /* 图片轮播部分 */
+        .container{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .picture_carousel{
+            height:1200px;
+            width:100%;
+            background-color: rgb(240, 200, 220);
+        }
+        
+        /* 图片轮播 */
+        .slider-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: auto;
+  border: 4px solid black;
+  float: left;
+}
+
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.control-btn {
+  position: relative;
+  bottom: 30px;
+  background-color: #ccc;
+  border: none;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-btn.active {
+  background-color: rgb(228, 160, 192);
+}
+/* 图片轮播部分结束 */
+
+/* .clickbutton{
+    height: 35px;
+    width:120px;
+    position: relative;
+    top: 520px;
+    left: 690px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 40, 40);
+} */
+.toptext{
+  /* position: absolute; */
+  position: relative;
+  left:35%;
+}
+.toptext2{
+  position: absolute;
+  right:5%;
+  top: 0px;
+  font-size: 20px;
+  color: black;
+}
+
+/* 商品 */
+        .shop_things{
+            height:1000px;
+            width:100%;
+            background-color:rgb(230, 215, 222);
+            clear:both;
+        }
+        .text2{
+          position:relative;
+          font-size:50px;
+          float: left;
+          left: 650px;
+          top: 70px;
+        }
+        .footer{
+          position: relative;
+            clear:both;
+          height:300px;
+            width:100%;
+            background-color: rgb(243, 227, 235);
+        }
+        .logo{
+          height:100px;
+          width:400px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+      <div class="menu_btn">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <div class="toptext"><h1>T&X CLOTHSHOP</h1></div>
+      <a href="login.html"><p class="toptext2"><b>Log in</b></p></a>
+    </div>
+
+    <div class="container">
+      <div class="menu">
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/womanshop.html"><h2>女装</h2></a>
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/manshop.html"><h2>男装</h2></a>
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/accessories.html"><h2>配饰</h2></a>
+      </div>
+      <!-- 幻灯片容器 -->
+      <div class="slider-container">
+        <div class="slides">
+          <img src="img\女装2.avif" alt="Image 1" class="slide active">
+          <img src="img/mancloth2.avif" alt="Image 2" class="slide">
+          <img src="img/配饰.webp" alt="Image 3" class="slide">
+          <!-- <div class="clickbutton">
+            <div class="text"><h3 style="text-align:center;">了解更多</h3></div>
+          </div> -->
+        </div>
+        
+        <button class="arrow prev">&lt;</button>
+        <button class="arrow next">&gt;</button>
+
+        <!-- 控制按钮区 -->
+        <div class="controls">
+          <button class="control-btn" data-index="0"></button>
+          <button class="control-btn" data-index="1"></button>
+          <button class="control-btn" data-index="2"></button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="shop_things">
+      <h1 class="text2">商品分类</h1>
+      <div class="left_blank">
+        <img src="img/女装1.avif" alt="Image 1" class="full-width-image" >
+        <div class="bt1"></div>
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/womanshop.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">女装</a>
+      </div>
+      <div class="middle_blank">
+        <img src="img\mancloth.webp" alt="Image 2" class="full-width-image" >
+        <div class="bt1"></div>
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/manshop.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">男装</a>
+      </div>
+      <div class="right_blank">
+        <img src="img\配饰.jpg" alt="Image 3" class="full-width-image" >
+        <div class="bt1"></div>
+        <a href="http://127.0.0.1:5500/%E6%9C%8D%E8%A3%85/accessories.html" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">配饰</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+        <div class="left-col">
+          <img src="img\logo.png" alt="" class="logo">
+          <div class="social-media">
+            <a href="https://www.techspot.com/downloads/6048-facebook-for-android.html"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://apps.apple.com/us/app/twitter/id1482454543?mt=12"><i class="fab fa-twitter"></i></a>
+            <a href="https://apps.apple.com/ca/app/instagram/id389801252"><i class="fab fa-instagram"></i></a>
+            <a href="https://apps.apple.com/dk/app/youtube/id544007664?l=da"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.cn/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <p class="rights-text">© 2024 Created By Xu ALL Rights Reserved.</p>
+        </div>
+        <div class="right-col">
+          <h1>Our Newsletter</h1>
+          <div class="border"></div>
+          <p class="">Enter Your Email to get our news and updates.</p>
+          <form action="" class="newsletter-form">
+            <input type="text" class="txtb" placeholder="Enter Your Email">
+            <input type="submit" class="btn" value="submit">
+          </form>
+        </div>
+      </div>
+      
+    </div>
+</body>
+
+<script>
+  //点击menu按钮开关菜单栏
+  let btn=document.querySelector('.menu_btn')
+  btn.onclick=function(){
+    this.classList.toggle('close')
+    let menu=document.querySelector('.menu')
+    menu.classList.toggle('show')
+  }
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.slide');
+      const controlBtns = document.querySelectorAll('.control-btn');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+      const totalSlides = slides.length;
+    
+      // 这个函数用于设置当前激活的图片。它首先遍历所有的图片和控制按钮，
+      //移除它们的active类，然后将指定索引的图片和控制按钮设置为激活状态。
+      function setActiveSlide(index) {
+        // Remove active classes
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          controlBtns[i].classList.remove('active');
+        });
+    
+        // Set active slide
+        slides[index].classList.add('active');
+        controlBtns[index].classList.add('active');
+      }
+    
+      // Initial active slide
+      setActiveSlide(currentIndex);
+    
+      // Next slide  这段代码为下一张按钮添加点击事件监听器。
+      //当用户点击该按钮时，会更新currentIndex，并调用setActiveSlide(currentIndex)切换到下一张图片。
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        setActiveSlide(currentIndex);
+      });
+    
+      // Previous slide  这段代码为上一张按钮添加点击事件监听器。当用户点击该按钮时，
+      //会更新currentIndex，并调用setActiveSlide(currentIndex)切换到上一张图片。
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        setActiveSlide(currentIndex);
+      });
+    
+      // Control buttons  这段代码为每个控制按钮添加点击事件监听器。当用户点击某个按钮时，
+      //会将currentIndex设置为该按钮的索引，并调用setActiveSlide(currentIndex)切换到对应的图片。
+      controlBtns.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          currentIndex = index;
+          setActiveSlide(currentIndex);
+        });
+      });
+    
+      // Auto-switch slides every 3 seconds
+      //这段代码实现了自动切换图片的功能。每隔3秒，会自动调用nextBtn.click()方法，切换到下一张图片。
+      setInterval(() => {
+        nextBtn.click();
+      }, 3000);
+    });
+
+</script>
+
+
+</html>
